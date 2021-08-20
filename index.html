@@ -24,61 +24,63 @@
                         any workload with ease. </p>
                     <h4 class="font-bold text-xl mt-6 mb-2">Memory</h4>
                     <div class="select-item">
-                        <select class="selection" multiple>
-                            <option value="8gbum">8GB undefined Memory</option>
-                            <option value="16gbum">16GB undefined memory</option>
+                        <select class="selection" multiple id="memory-price">
+                            <option value="8gbum" price='0'>8GB undefined Memory</option>
+                            <option value="16gbum" price='180'>16GB undefined memory</option>
                         </select>
                     </div>
                     <h4 class="font-bold text-xl mt-6 mb-2">Storage</h4>
                     <div class="select-item">
-                        <select class="selection" multiple>
-                            <option value="256gbssd">256GB SSD Storage</option>
-                            <option value="512gbssd">512GB SSD Storage</option>
-                            <option value="1tbss">1TB SSD Storage</option>
+                        <select class="selection" multiple id="storage-price">
+                            <option value="256gbssd" price='0'>256GB SSD Storage</option>
+                            <option value="512gbssd" price='100'>512GB SSD Storage</option>
+                            <option value="1tbss" price='180'>1TB SSD Storage</option>
                         </select>
                     </div>
                     <h4 class="font-bold text-xl mt-6 mb-2">Choose Your Delivery Option</h4>
                     <div class="select-item">
-                        <select class="selection" multiple>
-                            <option value="freedc">Friday, Aug 25 FREE Pricme Delivery</option>
-                            <option value="20dc">Friday, Aug 21 Delivery charge $20</option>
+                        <select class="selection" multiple id="delivery-price">
+                            <option value="freedc" price='0'>Friday, Aug 25 FREE Pricme Delivery</option>
+                            <option value="20dc" price='20'>Friday, Aug 21 Delivery charge $20</option>
                         </select>
                     </div>
                     <div class="mt-6 w-1/2 ">
                         <div class="flex border-b border-gray-200 pt-1 pb-1">
                             <p class="font-bold w-2/3">Best Price</p>
-                            <p class="w-1/3 font-bold">$1299</p>
+                            <p class="w-1/3 font-bold">$<span id="best-amount">1299</span> </p>
                         </div>
                         <div class="flex  border-b border-gray-200 pt-1 pb-1">
                             <p class="font-bold w-2/3"> Extra Memory Cost</p>
-                            <p class="w-1/3 font-bold">$0</p>
+                            <p class="w-1/3 font-bold">$<span id="memory-amount">0</span></p>
                         </div>
                         <div class="flex  border-b border-gray-200 pt-1 pb-1">
                             <p class="font-bold w-2/3">Extra Storage Cost</p>
-                            <p class="w-1/3 font-bold">$0</p>
+                            <p class="w-1/3 font-bold">$<span id="storage-amount">0</span></p>
                         </div>
                         <div class="flex  border-b-2 border-black pt-1 pb-1">
                             <p class="font-bold w-2/3 ">Delivery Charge</p>
-                            <p class="w-1/3 font-bold">$0</p>
+                            <p class="w-1/3 font-bold">$<span id="delivery-amount">0</span></p>
                         </div>
                         <div class="flex border-b border-gray-200 pt-1 pb-1">
                             <p class="font-bold w-2/3">Total Price</p>
-                            <p class="w-1/3 font-bold">$1299</p>
+                            <p class="w-1/3 font-bold">$<span id="total-price">1299</span> </p>
                         </div>
                         <div class="flex pt-1">
                             <p class="font-mwdium w-2/3">Add Promo Code</p>
                         </div>
                         <div class="flex mt-2">
-                            <input type="text" class="border p-1 w-full">
-                            <input type="submit" value="Apply"
+                            <input type="text" class="border p-1 w-full" id="coupon-box">
+                            <input type="submit" value="Apply" id="coupon-apply"
                                 class="pl-4 pr-4 bg-red-500 text-white font-bold cursor-pointer	">
                         </div>
+                        <p class="p-1 text-sm" id="coupon-noti"></p>
                     </div>
                 </div>
             </div>
             <hr class="mt-4">
-            <p class="text-4xl text-center font-bold mt-4">Total $1299</p>
+            <p class="text-4xl text-center font-bold mt-4">Total $<span id="below-total">1299</span> </p>
         </div>
+        <script src="app.js"></script>
     </body>
 
 </html>
