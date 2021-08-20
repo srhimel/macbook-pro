@@ -7,8 +7,9 @@ function getPrice(priceId) {
             document.getElementById('total-price').innerText = totalSum();
             document.getElementById('below-total').innerText = totalSum();
         }
-
+        applyCoupon();
     });
+
 }
 
 //execute function
@@ -29,7 +30,7 @@ function totalSum() {
 }
 
 // Apply Coupon
-document.getElementById('coupon-apply').addEventListener('click', function () {
+function applyCoupon() {
     const belowTotal = document.getElementById('below-total');
     const mainTotal = document.getElementById('total-price');
     const couponCheck = document.getElementById('coupon-box').value.toLowerCase();
@@ -40,9 +41,9 @@ document.getElementById('coupon-apply').addEventListener('click', function () {
         couponNotification.innerText = 'Coupon Applied Successfull'
         couponNotification.style.color = 'green';
     }
-    else {
+    else if (couponCheck.length > 0) {
         couponNotification.innerText = 'Coupon is not okay! try using: stevekaku'
         couponNotification.style.color = 'red';
         belowTotal.innerText = document.getElementById('total-price').innerText;
     }
-});
+}
