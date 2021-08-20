@@ -31,11 +31,12 @@ function totalSum() {
 // Apply Coupon
 document.getElementById('coupon-apply').addEventListener('click', function () {
     const belowTotal = document.getElementById('below-total');
+    const mainTotal = document.getElementById('total-price');
     const couponCheck = document.getElementById('coupon-box').value.toLowerCase();
     const couponNotification = document.getElementById('coupon-noti');
     if (couponCheck == 'stevekaku') {
-        const coupon = belowTotal.innerText * .2;
-        belowTotal.innerText -= coupon;
+        const coupon = mainTotal.innerText * .2;
+        belowTotal.innerText = mainTotal.innerText - coupon;
         couponNotification.innerText = 'Coupon Applied Successfull'
         couponNotification.style.color = 'green';
     }
