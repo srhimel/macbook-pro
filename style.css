@@ -1,0 +1,35 @@
+.selection {
+    height: 50px;
+    border: none;
+    overflow: hidden;
+    background: transparent;
+    width: 100%;
+}
+
+.selection::-moz-focus-inner {
+    border: 0;
+}
+
+.selection:focus {
+    outline: none;
+}
+
+.selection option {
+    width: auto;
+    font-size: 16px;
+    padding: 8px 10px;
+    text-align: center;
+    margin-right: 10px;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.selection option:hover {
+    background: #000;
+    color: #fff;
+}
