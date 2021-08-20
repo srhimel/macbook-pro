@@ -11,24 +11,14 @@ function getPrice(priceId) {
     });
 
 }
-
-//execute function
-
-getPrice('memory');
-getPrice('storage');
-getPrice('delivery');
-
 // Get Total Amount
-
 function amonutValue(amountId) {
     let amountValue = document.getElementById(amountId + '-amount').innerText;
     return parseFloat(amountValue);
 }
-
 function totalSum() {
     return amonutValue('best') + amonutValue('memory') + amonutValue('storage') + amonutValue('delivery');
 }
-
 // Apply Coupon
 function applyCoupon() {
     const belowTotal = document.getElementById('below-total');
@@ -44,6 +34,10 @@ function applyCoupon() {
     else if (couponCheck.length > 0) {
         couponNotification.innerText = 'Coupon is not okay! try using: stevekaku'
         couponNotification.style.color = 'red';
-        belowTotal.innerText = document.getElementById('total-price').innerText;
+        belowTotal.innerText = mainTotal.innerText;
     }
 }
+//execute function
+getPrice('memory');
+getPrice('storage');
+getPrice('delivery');
